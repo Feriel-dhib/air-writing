@@ -116,6 +116,11 @@ class PredictResponse(BaseModel):
 # ---------------------------------------------------------------------------
 # Endpoints
 # ---------------------------------------------------------------------------
+@app.get("/")
+async def root():
+    return {"service": "air-writing-api", "status": "ok", "docs": "/docs"}
+
+
 @app.get("/health")
 async def health():
     return {
