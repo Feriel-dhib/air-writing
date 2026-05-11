@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: air-writing-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TF_CPP_MIN_LOG_LEVEL
+        value: "3"
